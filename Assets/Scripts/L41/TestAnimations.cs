@@ -43,10 +43,12 @@ public class TestAnimations : MonoBehaviour
         tweenAnimation.Append(cube.DOMoveY(targetPosition, duration));
         tweenAnimation.Join(cube.DOLocalRotate(new Vector3(0, 360, 0), duration, RotateMode.WorldAxisAdd));
         tweenAnimation.Append(cube.DOShakeRotation(duration));
-        tweenAnimation.Join(cube.DOShakeScale(duration / 2).SetLoops(2));
-        tweenAnimation.AppendCallback(AnimationPart);
+        tweenAnimation.Join(cube.DOShakeScale(duration / 2).SetLoops(2));//добавляет несколько итераций  setloop
+        tweenAnimation.AppendCallback(AnimationPart);//
         tweenAnimation.Append(cube.DOMoveY(position, duration));
-
+        
+        tweenAnimation.onComplete += AnimationPart;
+        
         // Add Complete sequence action
         tweenAnimation.onComplete += FinishAnimation;
     }
@@ -72,7 +74,7 @@ public class TestAnimations : MonoBehaviour
     private void FinishAnimation()
     {
         cube.DOScale(Vector3.zero, duration / 10f);
-        pointLight.DOIntensity(0, duration);
+        pointLight.DOIntensity(0, duration);//if add .From(); действие выполниться наоборот и свет появиться с нуля в макс
         Debug.Log("Finished");
     }
 }
