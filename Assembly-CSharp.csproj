@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\L31\EditorPart\GameParameters.cs" />
     <Compile Include="Assets\Scripts\L31\Game\Data\AirData.cs" />
     <Compile Include="Assets\Scripts\L31\ExampleScript.cs" />
+    <Compile Include="Assets\Scripts\L51\Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Samples\Polybrush\1.1.3\Shader Examples (Standard)\Shader\SimpleTextureBlend.shader" />
@@ -781,6 +782,12 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.State">
       <HintPath>Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
+    </Reference>
+    <Reference Include="com.unity.cinemachine.editor">
+      <HintPath>Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Cinemachine">
+      <HintPath>Library\ScriptAssemblies\Cinemachine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
