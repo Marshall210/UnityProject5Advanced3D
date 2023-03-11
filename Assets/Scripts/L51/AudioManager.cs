@@ -21,7 +21,7 @@ public class AudioManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void PlaySound(string soundName)
+    public void PlaySound(string soundName, AudioSource audioSource)
     {
         // Try to find sound by name
         var sound = sounds.FirstOrDefault(e => e.name == soundName);
