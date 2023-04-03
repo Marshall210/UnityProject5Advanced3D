@@ -70,6 +70,8 @@
     <Compile Include="Assets\Scripts\L31\ExampleScript.cs" />
     <Compile Include="Assets\Scripts\L71UI\SpriteAtlasSetter.cs" />
     <Compile Include="Assets\Scripts\L71UI\UpdateUi.cs" />
+    <Compile Include="Assets\Scripts\Main\ButtonSceneSwitcher.cs" />
+    <Compile Include="Assets\Scripts\Main\RestartButton.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
